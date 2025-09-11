@@ -1,0 +1,558 @@
+/* --- Global Styles --- */
+/* GCA Colors: Navy (#000055), Orange (#F38540) */
+/* Inspired by National Learning Day themes: clean, accessible, and engaging. */
+
+:root {
+    --gca-navy: #000055;
+    --gca-orange: #F38540;
+    --light-grey: #f4f4f4;
+    --dark-text: #333;
+    --card-background: rgba(255, 255, 255, 0.9);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Open Sans', Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--dark-text);
+
+    /* Subtle, educational-themed background */
+    background-color: var(--light-grey);
+    background-image: url('data:image/svg+xml;charset=utf8,%3Csvg xmlns="http://www.w3.org/2000/svg" width="200" height="200"%3E%3Cpath fill="%23e5e5f7" d="M125 50l50 50-50 50-50-50 50-50z" opacity=".5"/%3E%3Cpath fill="%23d8d8e5" d="M100 25l25 25-25 25-25-25 25-25z" opacity=".5"/%3E%3Cpath fill="%23d8d8e5" d="M75 50l25 25-25 25-25-25 25-25z" opacity=".5"/%3E%3Cpath fill="%23d8d8e5" d="M125 100l25 25-25 25-25-25 25-25z" opacity=".5"/%3E%3Cpath fill="%23d8d8e5" d="M100 125l25 25-25 25-25-25 25-25z" opacity=".5"/%3E%3C/svg%3E');
+    background-repeat: repeat;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.section {
+    background-color: var(--card-background);
+    padding: 30px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--gca-navy);
+    margin-bottom: 1rem;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+a {
+    color: var(--gca-orange);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+/* --- Sidebar Navigation Styles --- */
+.sidebar-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background-color: var(--gca-navy);
+    padding-top: 60px;
+    transform: translateX(-250px);
+    transition: transform 0.3s ease-in-out;
+    z-index: 1001;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.sidebar-nav.is-open {
+    transform: translateX(0);
+}
+
+.sidebar-nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar-nav ul li a {
+    display: block;
+    padding: 15px 20px;
+    color: white;
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar-nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* --- Hamburger Button Styles --- */
+.hamburger-menu {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 40px;
+    height: 30px;
+    background: none;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    cursor: pointer;
+    z-index: 1002;
+    padding: 0;
+}
+
+.hamburger-menu span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: var(--gca-orange);
+    transition: all 0.3s ease-in-out;
+}
+
+/* --- Close Button Styles --- */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 2.5rem;
+    color: white;
+    cursor: pointer;
+}
+
+/* --- Main Content Adjustments (for when sidebar is open) --- */
+body.sidebar-open {
+    overflow-x: hidden;
+}
+
+#main-content {
+    transition: margin-left 0.3s ease-in-out;
+}
+
+
+
+
+
+
+
+/* --- Header Section --- */
+.header {
+    position: relative;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+}
+
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.responsive-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+}
+
+.header-content {
+    position: relative;
+    z-index: 1;
+    padding: 20px;
+    /* Add a semi-transparent background to ensure text is readable */
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+.logo-link {
+    display: block;
+    margin-bottom: 20px;
+}
+
+.gca-logo {
+    width: 150px;
+    height: auto;
+}
+
+.btn {
+    background-color: var(--gca-orange);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #e07432;
+}
+
+/* --- Full-Screen Video Overlay --- */
+.full-screen-video-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.95);
+    display: none; /* Still hidden by default, shown by JS */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.overlay-video {
+    max-width: 90%;
+    max-height: 90%;
+    border: 3px solid var(--gca-orange);
+}
+
+.close-overlay-btn {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+
+/* --- Main Content Sections --- */
+.content-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.fact-card {
+    background-color: white;
+    padding: 20px;
+    border-left: 5px solid var(--gca-orange);
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.fact-card:hover {
+    transform: translateY(-5px);
+}
+
+
+/* --- SOAR Champions Matrix --- */
+.soar-section {
+    background-color: var(--card-background);
+    padding: 30px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.soar-matrix-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.soar-column {
+    flex: 1;
+    min-width: 250px;
+    padding: 15px;
+    background-color: white;
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.soar-column h3 {
+    text-align: center;
+    color: var(--gca-orange);
+    font-size: 1.5rem;
+    border-bottom: 2px solid var(--gca-navy);
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.soar-category h4 {
+    color: var(--gca-navy);
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+.soar-column ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.soar-column li {
+    padding: 5px 0;
+    font-size: 0.9rem;
+}
+
+/* --- CTSO Dropdowns with Buttons --- */
+.ctso-dropdown-container {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.ctso-header {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    justify-content: space-between;
+}
+
+.ctso-header h3 {
+    flex-grow: 1;
+    margin: 0;
+    padding-left: 15px;
+    font-size: 1.2rem;
+}
+
+.ctso-logo {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.ctso-content {
+    padding-top: 20px;
+    transition: max-height 0.3s ease-in-out;
+    overflow: hidden;
+    max-height: 0;
+}
+
+.ctso-dropdown-container.active .ctso-content {
+    max-height: 500px; /* Adjust based on content height */
+}
+
+.ctso-toggle-btn {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.ctso-toggle-btn span {
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+.ctso-dropdown-container.active .ctso-toggle-btn {
+    transform: rotate(45deg); /* Change to an 'x' when open */
+}
+
+
+/* --- Feedback Section --- */
+.feedback-section {
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.feedback-response {
+    margin-top: 10px;
+    font-weight: bold;
+    color: green;
+    display: none;
+}
+
+
+/* --- "Did you find Champ?" Activity Section --- */
+/* --- "Did you find Champ?" Activity Section --- */
+#champActivity {
+    /* The `display: none;` has been removed to make it always visible. */
+    text-align: center;
+    padding: 30px;
+    background-color: var(--gca-navy);
+    color: white;
+    border-radius: 8px;
+    margin-top: 40px; 
+}
+
+#champActivity .form-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px; /* Adds space between the text and checkbox */
+}
+
+#champActivity .form-group label {
+    margin: 0 10px;
+    color: white;
+}
+
+/* --- Responsive iframe Container --- */
+.responsive-iframe-container {
+    position: relative;
+    padding-bottom: 68.75%; /* Calculated based on the Google Form's aspect ratio (440 / 640 = 0.6875) */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.responsive-iframe-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* --- Responsive Images --- */
+.champ-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+}
+
+
+/* --- Footer Styling --- */
+.site-footer {
+    background-color: var(--gca-navy);
+    color: white;
+    padding: 40px 0;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 200px;
+    margin: 20px;
+}
+
+.footer-column h3 {
+    color: var(--gca-orange);
+    border-bottom: 2px solid white;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.footer-column ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+    color: var(--gca-orange);
+    text-decoration: none;
+}
+
+.footer-logo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.footer-logo img {
+    width: 150px;
+    height: auto;
+}
+
+.copyright {
+    text-align: center;
+    font-size: 0.8rem;
+    opacity: 0.8;
+}
+
+/* Responsive Footer adjustments */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-column {
+        margin: 20px 0;
+    }
+
+    .footer-column h3 {
+        border-bottom: none;
+    }
+
+    .footer-logo img {
+        margin-top: 20px;
+    }
+}
+
+
+/* Add this to your existing styles.css file */
+.pbis-image {
+    max-width: 100%; /* Ensures the image doesn't overflow its container */
+    height: auto;    /* Maintains the image's aspect ratio */
+    display: block;  /* Prevents extra spacing below the image */
+    margin: 20px auto; /* Centers the image within the container */
+    border: 1px solid #ccc; /* Optional: adds a subtle border */
+    border-radius: 5px; /* Optional: adds rounded corners */
+}
+
+

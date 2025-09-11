@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>National Learning Day & GCA Champions</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Montserrat font for headings -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Open Sans for body text -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Hamburger button to toggle the sidebar -->
+    <button id="open-sidebar-btn" class="hamburger-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <!-- The sidebar navigation menu -->
+    <nav id="sidebar-nav" class="sidebar-nav">
+        <button id="close-sidebar-btn" class="close-btn">&times;</button>
+        <ul>
+            <li><a href="index.html">National Learning Day Home</a></li>
+            <li><a href="pbis.html">PBIS Info</a></li>
+        </ul>
+    </nav>
+
+
+
+    <!-- Header with Responsive Background Video -->
+    <header class="header">
+        <div class="video-background">
+            <video autoplay loop muted playsinline class="responsive-video">
+                <source src="milltary.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="header-content">
+            <a href="https://www.georgiacyber.org/" target="_blank" class="logo-link">
+                <img src="gca-full-logo-white.png" alt="GCA Logo" class="gca-logo">
+            </a>
+            <h1>GCA National Learning Day</h1>
+            <p>Celebrating our Champions and their achievements.</p>
+            <button id="expandVideoButton" class="btn">Learn More</button>
+        </div>
+    </header>
+
+    <!-- Full-screen video overlay (This will be the pop-up) -->
+    <div id="fullScreenVideoOverlay" class="full-screen-video-overlay">
+        <button id="closeVideoOverlay" class="close-overlay-btn">&times;</button>
+        <video controls playsinline class="overlay-video">
+            <source src="mil.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <!-- Main Content Area -->
+    <main class="container">
+        <!-- More to Learn and Fun Facts Section -->
+<!-- More to Learn and Fun Facts Section -->
+<section class="section">
+    <h2>More to Learn & Fun Facts</h2>
+    <div class="content-grid">
+        <div class="fact-card">
+            <h3>CTSO Showcase</h3>
+            <p>Learn about the various Career and Technical Student Organizations (CTSOs) at GCA and the opportunities they offer.</p>
+        </div>
+        <div class="fact-card">
+            <h3>PBIS Store Info</h3>
+            <p>Find out how to log in to the PBIS Store via Clever and learn about tips and rewards.</p>
+            <a href="pbis.html" class="btn small-btn">Learn More</a>
+        </div>
+        <div class="fact-card">
+            <h3>NLD Fun Fact</h3>
+            <p>The brain actually strengthens its connections when it corrects errors!</p>
+        </div>
+    </div>
+</section>
+
+
+        <!-- CTSO's Information Section -->
+<!-- CTSO's Information Section -->
+<section class="section ctsos-section">
+    <h2>CTSO's Information</h2>
+    <div class="ctso-list">
+        <!-- DECA -->
+        <div class="ctso-dropdown-container">
+            <div class="ctso-header">
+                <img src="DECA.png" alt="DECA Logo" class="ctso-logo">
+                <h3>Distributive Education Clubs of America (DECA)</h3>
+                <button class="ctso-toggle-btn btn small-btn">
+                    <span>+</span>
+                </button>
+            </div>
+            <div class="ctso-content" style="display: none;">
+                <p>Distributive Education Club of America is a student-centered, educational/professional organization with a program of leadership and career development designed specifically for students enrolled in marketing education. Marketing education prepares students for rewarding careers in marketing, management and entrepreneurship. DECA enhances that education by providing marketing-related activities based directly on classroom study.</p>
+            </div>
+        </div>
+
+        <!-- FIRST Robotics Competition -->
+        <div class="ctso-dropdown-container">
+            <div class="ctso-header">
+                <img src="first-horz-rgb.png" alt="FIRST Robotics Logo" class="ctso-logo">
+                <h3>FIRST Robotics Competition (FRC)</h3>
+                <button class="ctso-toggle-btn btn small-btn">
+                    <span>+</span>
+                </button>
+            </div>
+            <div class="ctso-content" style="display: none;">
+                <p>FIRST® Robotics Competition teams design, program, and build a robot starting with a standard kit of parts and common set of rules to play in a themed head-to-head challenge. Teams also build a brand, develop community partnerships for support, and work to promote STEM in their local community. FRC is for grades 9-12, ages 14-18.</p>
+            </div>
+        </div>
+
+        <!-- FBLA -->
+        <div class="ctso-dropdown-container">
+            <div class="ctso-header">
+                <img src="FBLA.png" alt="FBLA Logo" class="ctso-logo">
+                <h3>Future Business Leaders of America (FBLA)</h3>
+                <button class="ctso-toggle-btn btn small-btn">
+                    <span>+</span>
+                </button>
+            </div>
+            <div class="ctso-content" style="display: none;">
+                <p>Future Business Leaders of America-Phi Beta Lambda is a nonprofit education association of students preparing for careers in business and business-related fields. The FBLA Mission is to bring business and education together in a positive working relationship through innovative leadership and career development programs.</p>
+            </div>
+        </div>
+        
+        <!-- FCCLA -->
+        <div class="ctso-dropdown-container">
+            <div class="ctso-header">
+                <img src="FCCLA.jpg" alt="FCCLA Logo" class="ctso-logo">
+                <h3>Family, Career, and Community Leaders of America (FCCLA)</h3>
+                <button class="ctso-toggle-btn btn small-btn">
+                    <span>+</span>
+                </button>
+            </div>
+            <div class="ctso-content" style="display: none;">
+                <p>Family, Career and Community Leaders of America, Inc. is a nonprofit national career and technical student organization for young men and women in family and consumer sciences education in public and private school through grade 12.</p>
+            </div>
+        </div>
+
+        <!-- HOSA -->
+        <div class="ctso-dropdown-container">
+            <div class="ctso-header">
+                <img src="HOSA.jpg" alt="HOSA Logo" class="ctso-logo">
+                <h3>HOSA – Future Health Professionals</h3>
+                <button class="ctso-toggle-btn btn small-btn">
+                    <span>+</span>
+                </button>
+            </div>
+            <div class="ctso-content" style="display: none;">
+                <p>HOSA is a national student organization endorsed by the U.S. Department of Education and the Health Science Technology Education Division of ACTE. HOSA's two-fold mission is to promote career opportunities in the health care industry and to enhance the delivery of quality health care to all people. HOSA's goal is to encourage all health occupations instructors and students to join and be actively involved in the HSTE-HOSA Partnership.</p>
+            </div>
+        </div>
+
+        <!-- SkillsUSA -->
+        <div class="ctso-dropdown-container">
+            <div class="ctso-header">
+                <img src="SkillsUSA.png" alt="SkillsUSA Logo" class="ctso-logo">
+                <h3>SkillsUSA</h3>
+                <button class="ctso-toggle-btn btn small-btn">
+                    <span>+</span>
+                </button>
+            </div>
+            <div class="ctso-content" style="display: none;">
+                <p>SkillsUSA is the #1 workforce development organization for students. We empower students to become skilled professionals, career-ready leaders and responsible community members. From our mission to our reach, from our brand to our history, learn who we are, what we do and why we do it.</p>
+            </div>
+        </div>
+
+        <!-- TSA -->
+        <div class="ctso-dropdown-container">
+            <div class="ctso-header">
+                <img src="TSA.png" alt="TSA Logo" class="ctso-logo">
+                <h3>Technology Student Association (TSA)</h3>
+                <button class="ctso-toggle-btn btn small-btn">
+                    <span>+</span>
+                </button>
+            </div>
+            <div class="ctso-content" style="display: none;">
+                <p>Technology Student Association is a national, non-profit organization for students with an interest in technology. TSA members learn problem-solving, decision-making, critical thinking and leadership skills as they relate to design, communications, power, energy, transportation, engineering, manufacturing, construction and biotechnology. TSA strives to meet the educational needs and challenges of all students in an increasingly and ever-changing technological world.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+        <!-- GCA SOAR Champions Matrix -->
+        <section class="soar-section">
+            <h2>GCA SOAR CHAMPIONS: Expectations</h2>
+            <div class="soar-matrix-container">
+                <div class="soar-column">
+                    <h3>S - SAFE</h3>
+                    <div class="soar-category">
+                        <h4>Classroom</h4>
+                        <ul><li>Use teacher-approved tools & websites.</li></ul>
+                    </div>
+                    <div class="soar-category">
+                        <h4>On Camera</h4>
+                        <ul><li>Use camera appropriately.</li><li>Follow the GCA dress code.</li></ul>
+                    </div>
+                    <div class="soar-category">
+                        <h4>Academic Integrity</h4>
+                        <ul><li>Protect private information.</li><li>Only use teacher-approved tools and websites.</li></ul>
+                    </div>
+                    <div class="soar-category">
+                        <h4>Asynchronous Class Time</h4>
+                        <ul><li>Only use teacher-approved websites.</li></ul>
+                    </div>
+                    <div class="soar-category">
+                        <h4>Testing</h4>
+                        <ul><li>Use school/testing approved learning device and resources.</li></ul>
+                    </div>
+                </div>
+
+                <div class="soar-column">
+                    <h3>O - ON TASK</h3>
+                    <div class="soar-category">
+                        <h4>Classroom</h4>
+                        <ul><li>Follow teacher directions and remain in class until dismissed.</li></ul>
+                    </div>
+                    <div class="soar-category">
+                        <h4>On Camera</h4>
+                        <ul><li>Find a quiet, distraction-free workspace.</li></ul>
+                    </div>
+                    <div class="soar-category">
+                        <h4>Academic Integrity</h4>
+                        <ul><li>Complete assignments on your own with the reference materials provided by your teacher.</li><li>Complete assignments using your own words.</li></ul>
+                    </div>
+                    <div class="soar-category">
+                        <h4>Asynchronous Class Time</h4>
+                        <ul><li>Stay on the assigned task.</li><li>Email teachers with questions.</li></ul>
+                    </div>
+                    <div class="soar-category">
+                        <h4>Testing</h4>
+                        <ul><li>Close other tabs and browsers.</li></ul>
+                    </div>
+                </div>
+
+                <div class="soar-column">
+                    <h3>A - AWESOME ATTITUDE</h3>
+                    <div class="soar-category">
+                        <h4>Classroom</h4>
+                        <ul><li>Use kind words and respect others’ culture, opinions, and views.</li></ul>
+                    </div>
+                    <div class="soar-category">
+                        <h4>On Camera</h4>
+                        <ul><li>Use kind facial expressions and gestures.</li></ul>
+                    </div>
+                    <div class="soar-category">
+                        <h4>Academic Integrity</h4>
+                        <ul><li>Acknowledge the source of material used on an assignment (citing sources).</li><li>Follow assignment instructions.</li></ul>
+                    </div>
+                    <div class="soar-category">
+                        <h4>Asynchronous Class Time</h4>
+                        <ul><li>Take your time and do your best on all assignments.</li><li>Use a greeting and signature in all emails.</li><li>Respond to teacher emails.</li></ul>
+                    </div>
+                    <div class="soar-category">
+                        <h4>Testing</h4>
+                        <ul><li>Put forth your best effort.</li><li>Take your time.</li></ul>
+                    </div>
+                </div>
+                
+                <div class="soar-column">
+                    <h3>R - RESPONSIBLE</h3>
+                    <div class="soar-category">
+                        <h4>Classroom</h4>
+                        <ul><li>Join class on time and use camera, whiteboard tools, chat, and polling tools appropriately.</li><li>Follow the GCA Code of Conduct.</li></ul>
+                    </div>
+                    <div class="soar-category">
+                        <h4>On Camera</h4>
+                        <ul><li>Stay on camera for the duration of the class.</li></ul>
+                    </div>
+                    <div class="soar-category">
+                        <h4>Academic Integrity</h4>
+                        <ul><li>Complete assessments independently.</li></ul>
+                    </div>
+                    <div class="soar-category">
+                        <h4>Asynchronous Class Time</h4>
+                        <ul><li>Turn in all assignments on time.</li></ul>
+                    </div>
+                    <div class="soar-category">
+                        <h4>Testing</h4>
+                        <ul><li>Answer all test questions without outside help (LC, internet, etc.).</li></ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+<!-- "Did you find Champ?" Activity Section -->
+<section id="champActivity" class="section champ-activity-section">
+    <h2>Did you find Champ?</h2>
+    <img src="s-blob-v1-IMAGE-kX0bS_zfeiA.png" alt="An image of Champ" class="champ-image">
+    <p>Watch the video closely! If you found the hidden Champ, check the box below and tell us about your National Learning Day experience in the feedback section.</p>
+    <div class="form-group">
+        <input type="checkbox" id="champFound" name="champFound">
+        <label for="champFound">I found Champ!</label>
+    </div>
+</section>
+
+<!-- Feedback Section (Updated for Google Form) -->
+<section class="section feedback-section">
+    <h2>Your Feedback</h2>
+    <p>Tell us what you think about GCA's National Learning Day. Your input is valuable for future development!</p>
+    <!-- Use a container for the iframe to make it responsive -->
+    <div class="responsive-iframe-container">
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdsxTsR9iFi0ApkPnnJGFXiSD61xYrhE1dnKZUKh4RBnIx4-A/viewform?embedded=true" width="640" height="440" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+    </div>
+</section>
+
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <div class="footer-column">
+                <h3>GCA Resources</h3>
+                <ul>
+                    <li><a href="https://www.georgiacyber.org/academics/technology-info/canvas" target="_blank">Canvas</a></li>
+                    <li><a href="https://www.georgiacyber.org/academics/technology-info/infinite-campus" target="_blank">Infinite Campus</a></li>
+                    <li><a href="https://www.georgiacyber.org/parent-portal" target="_blank">Champion Portal</a></li>
+                    <li><a href="https://www.georgiacyber.org/staff-portal" target="_blank">Staff Portal</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Connect</h3>
+                <ul>
+                    <li><a href="https://www.georgiacyber.org/contact-us" target="_blank">Contact Us</a></li>
+                    <li><a href="https://www.georgiacyber.org/about-us" target="_blank">About GCA</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <div class="footer-logo">
+                    <a href="https://www.georgiacyber.org/" target="_blank">
+                        <img src="gca-full-logo-white.png" alt="GCA Logo">
+                    </a>
+                </div>
+                <p class="copyright">&copy; 2025 Georgia Cyber Academy. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

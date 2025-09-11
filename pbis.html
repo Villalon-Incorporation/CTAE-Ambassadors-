@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GCA PBIS Info</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Montserrat font for headings -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Open Sans for body text -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+
+ <!-- Hamburger button to toggle the sidebar -->
+    <button id="open-sidebar-btn" class="hamburger-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <!-- The sidebar navigation menu -->
+    <nav id="sidebar-nav" class="sidebar-nav">
+        <button id="close-sidebar-btn" class="close-btn">&times;</button>
+        <ul>
+            <li><a href="index.html">National Learning Day Home</a></li>
+            <li><a href="pbis.html">PBIS Info</a></li>
+        </ul>
+    </nav>
+
+
+    <!-- Header Section (reused for consistency) -->
+    <header class="header header-pbis">
+        <div class="header-content">
+            <a href="https://www.georgiacyber.org/" target="_blank" class="logo-link">
+                <img src="gca-full-logo-white.png" alt="GCA Logo" class="gca-logo">
+            </a>
+            <h1>GCA PBIS Information</h1>
+            <p>Your guide to the GCA PBIS Store via Clever.</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- How to get to PBIS Section -->
+<!-- PBIS Instructions Section -->
+<section class="section">
+    <h2>How to access the PBIS Store via Clever</h2>
+    <div class="pbis-instructions">
+        <p>Follow these simple steps to get to the PBIS Store and spend your well-earned points!</p>
+        
+        <div class="instruction-step">
+            <h3>Step 1: Log in to GCA Clever</h3>
+            <p>Log in to your GCA Clever account using your student credentials.</p>
+            <!-- Remove inline style for responsive handling -->
+            <img src="pbisgif.gif" alt="GCA Clever Login Page" class="pbis-image">
+        </div>
+
+        <div class="instruction-step">
+            <h3>Step 2: Find and Click the PBIS Store App</h3>
+            <p>Once logged in, scroll through your applications and click on the PBIS Store icon.</p>
+            <img src="Adobe Express - Screen recording 2025-09-10 9.18.40 PM (online-video-cutter.com).gif" alt="PBIS Store App on Clever" class="pbis-image">
+        </div>
+        
+        <div class="instruction-step">
+            <h3>Step 3: Browse and Shop!</h3>
+            <p>You're in! Use your points to redeem awesome rewards.</p>
+            <img src="storepp.gif" alt="PBIS Store rewards page" class="pbis-image">
+        </div>
+    </div>
+</section>
+
+
+<!-- PBIS Tips and Uses Section -->
+<section class="section">
+    <h2>PBIS Tips and What they can be used for</h2>
+    <div class="ctso-list">
+        <!-- PBIS Tips Dropdown -->
+        <div class="ctso-dropdown-container">
+            <div class="ctso-header">
+                <h3>Tips for earning PBIS points</h3>
+                <button class="ctso-toggle-btn btn small-btn">
+                    <span>+</span>
+                </button>
+            </div>
+            <div class="ctso-content" style="display: none;">
+                <p>Stay on task in class, participate in discussions, and always show a positive attitude! Your teachers love to see you engaged.</p>
+            </div>
+        </div>
+
+        <!-- How points can be used Dropdown -->
+        <div class="ctso-dropdown-container">
+            <div class="ctso-header">
+                <h3>What are my PBIS points used for?</h3>
+                <button class="ctso-toggle-btn btn small-btn">
+                    <span>+</span>
+                </button>
+            </div>
+            <div class="ctso-content" style="display: none;">
+                <p>Your PBIS points can be redeemed for a variety of rewards, including virtual prizes, gift cards, and exclusive GCA merchandise. Check the store for all the possibilities!</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+    </main>
+
+    <!-- Footer Section (reused) -->
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <div class="footer-column">
+                <h3>GCA Resources</h3>
+                <ul>
+                    <li><a href="https://www.georgiacyber.org/academics/technology-info/canvas" target="_blank">Canvas</a></li>
+                    <li><a href="https://www.georgiacyber.org/academics/technology-info/infinite-campus" target="_blank">Infinite Campus</a></li>
+                    <li><a href="https://www.georgiacyber.org/parent-portal" target="_blank">Champion Portal</a></li>
+                    <li><a href="https://www.georgiacyber.org/staff-portal" target="_blank">Staff Portal</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Connect</h3>
+                <ul>
+                    <li><a href="https://www.georgiacyber.org/contact-us" target="_blank">Contact Us</a></li>
+                    <li><a href="https://www.georgiacyber.org/about-us" target="_blank">About GCA</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <div class="footer-logo">
+                    <a href="https://www.georgiacyber.org/" target="_blank">
+                        <img src="gca-full-logo-white.png" alt="GCA Logo">
+                    </a>
+                </div>
+                <p class="copyright">&copy; 2025 Georgia Cyber Academy. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+<script src="script.js"></script>
+</html>
