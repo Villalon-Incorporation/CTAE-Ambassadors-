@@ -172,6 +172,7 @@ body.sidebar-open {
     z-index: -1;
 }
 
+
 .responsive-video {
     position: absolute;
     top: 50%;
@@ -188,9 +189,33 @@ body.sidebar-open {
     z-index: 1;
     padding: 20px;
     /* Add a semi-transparent background to ensure text is readable */
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.6);
     border-radius: 10px;
 }
+
+
+/* Styling for the notification popup */
+.notification-popup {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1002;
+    display: none; /* Hidden by default */
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.notification-popup.show {
+    display: block;
+    opacity: 1;
+}
+
 
 .logo-link {
     display: block;
@@ -236,6 +261,53 @@ body.sidebar-open {
     max-height: 90%;
     border: 3px solid var(--gca-orange);
 }
+
+
+/* ... (rest of your CSS) ... */
+
+.video-container {
+    position: relative;
+    width: 640px; /* Match your video width */
+    height: 360px; /* Match your video height */
+    margin: 0 auto; /* Center the video container */
+}
+
+/* Other CSS styles */
+
+.full-screen-video-overlay {
+    /* Existing overlay styles */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: none; /* Hidden by default */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+
+
+#champTarget {
+    position: absolute;
+    /* Position the target in the left-center */
+    left: 15%; /* Left-center */
+    top: 19%; /* Vertical center */
+    transform: translate(-50%, -50%); /* Adjust to center it precisely */
+    width: 40px;
+    height: 80px;
+    background-color: #333; /* A transparent background */
+    cursor: pointer;
+    border-radius: 50%; /* A circular target */
+    z-index: 10; /* Ensure it's above the video */
+    display: none; /* Hidden by default, controlled by JS */
+}
+
+
+
+
 
 .close-overlay-btn {
     position: absolute;
