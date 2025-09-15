@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let isChampTargetTriggered = false;
     let champTargetClicked = false; // New flag to track if the interactive item was clicked
     
-    const googleFormUrl = "YOUR_GOOGLE_FORM_URL_HERE";
+    const googleFormUrl = "https://docs.google.com/forms/d/e/1FAIpQLSexIs8xhWP0vfeYZeVHJuiTkR3da_lRgcSXliOSiI7mS_9llQ/viewform?usp=header";
 
     if (expandVideoButton && fullScreenVideoOverlay && overlayVideo) {
         expandVideoButton.addEventListener('click', () => {
