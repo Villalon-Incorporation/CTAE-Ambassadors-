@@ -189,7 +189,7 @@ body.sidebar-open {
     z-index: 1;
     padding: 20px;
     /* Add a semi-transparent background to ensure text is readable */
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.5);
     border-radius: 10px;
 }
 
@@ -298,7 +298,7 @@ body.sidebar-open {
     transform: translate(-50%, -50%); /* Adjust to center it precisely */
     width: 40px;
     height: 80px;
-    background-color: #333; /* A transparent background */
+    background-color: transparent; /* A transparent background */
     cursor: pointer;
     border-radius: 50%; /* A circular target */
     z-index: 10; /* Ensure it's above the video */
