@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CTAE Ambassadors </title>
+    <title>CTAE Ambassadors</title>
     <link rel="stylesheet" href="styles.css">
     <!-- Montserrat font for headings -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
@@ -31,31 +31,41 @@
 
 
     <!-- Header with Responsive Background Video -->
-    <header class="header">
-        <div class="video-background">
-            <video autoplay loop muted playsinline class="responsive-video">
-                <source src="milltary.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </div>
-        <div class="header-content">
-            <a href="https://www.georgiacyber.org/" target="_blank" class="logo-link">
-                <img src="gca-full-logo-white.png" alt="GCA Logo" class="gca-logo">
-            </a>
-            <h1>GCA National Learning Day</h1>
-            <p>Celebrating our Champions and their achievements.</p>
-            <button id="expandVideoButton" class="btn">Learn More</button>
-        </div>
-    </header>
-
-    <!-- Full-screen video overlay (This will be the pop-up) -->
-    <div id="fullScreenVideoOverlay" class="full-screen-video-overlay">
-        <button id="closeVideoOverlay" class="close-overlay-btn">&times;</button>
-        <video controls playsinline class="overlay-video">
-            <source src="mil.mp4" type="video/mp4">
+<!-- Header with Responsive Background Video -->
+<header class="header">
+    <div class="video-background">
+        <video autoplay loop muted playsinline class="responsive-video">
+            <source src="National Online Learning Day Homeroom Video Sept 15th _blurred.mp4" type="video/mp4" >
             Your browser does not support the video tag.
         </video>
     </div>
+    <div class="header-content">
+        <a href="https://www.georgiacyber.org/" target="_blank" class="logo-link">
+            <img src="gca-full-logo-white.png" alt="GCA Logo" class="gca-logo">
+        </a>
+        <h1>GCA National Learning Day</h1>
+        <p>Celebrating our Champions and their achievements.</p>
+        <button id="expandVideoButton" class="btn">Learn More</button>
+    </div>
+</header>
+
+<!-- Full-screen video overlay (This will be the pop-up) -->
+<div id="fullScreenVideoOverlay" class="full-screen-video-overlay">
+    <button id="closeVideoOverlay" class="close-overlay-btn">&times;</button>
+    <video controls playsinline class="overlay-video">
+        <source src="National Online Learning Day Homeroom Video Sept 15th .mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <!-- The clickable interactive item -->
+    <div id="champTarget"></div>
+</div>
+
+
+<!-- Notification Popup -->
+<div id="champNotification" class="notification-popup">
+    <p>Did you miss Champ? Watch the video again to find the hidden interactive item!</p>
+</div>
+
 
     <!-- Main Content Area -->
     <main class="container">
@@ -131,8 +141,8 @@
         <!-- FCCLA -->
         <div class="ctso-dropdown-container">
             <div class="ctso-header">
-                <a href="https://fcclainc.org/" target="_blank"><img src="FCCLA.jpg" alt="FCCLA Logo" class="ctso-logo"></a>
-                <h3>Family, Career, and Community Leaders of America (FCCLA)</h3>
+                <img src="FCCLA.jpg" alt="FCCLA Logo" class="ctso-logo">
+               <h3>Family, Career, and Community Leaders of America (FCCLA)</h3></a>
                 <button class="ctso-toggle-btn btn small-btn">
                     <span>+</span>
                 </button>
@@ -289,16 +299,9 @@
             </div>
         </section>
 
-<!-- "Did you find Champ?" Activity Section -->
-<section id="champActivity" class="section champ-activity-section">
-    <h2>Did you find Champ?</h2>
-    <img src="s-blob-v1-IMAGE-kX0bS_zfeiA.png" alt="An image of Champ" class="champ-image">
-    <p>Watch the video closely! If you found the hidden Champ, check the box below and tell us about your National Learning Day experience in the feedback section.</p>
-    <div class="form-group">
-        <input type="checkbox" id="champFound" name="champFound">
-        <label for="champFound">I found Champ!</label>
-    </div>
-</section>
+
+
+
 
 <!-- Feedback Section (Updated for Google Form) -->
 <section class="section feedback-section">
@@ -328,7 +331,7 @@
                 <h3>Connect</h3>
                 <ul>
                     <li><a href="https://www.georgiacyber.org/contact-us" target="_blank">Contact Us</a></li>
-                    <li><a href="https://www.georgiacyber.org/about-us" target="_blank">About GCA</a></li>
+                    <li><a href="https://www.georgiacyber.org/enrollment/interested-in-georgia-cyber-academy" target="_blank">About GCA</a></li>
                 </ul>
             </div>
             <div class="footer-column">
