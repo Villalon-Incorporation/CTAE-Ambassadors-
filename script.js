@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // Start listening for the video time updates for the interactive item
             overlayVideo.addEventListener('timeupdate', () => {
     // 3 minutes * 60 seconds/minute + 14 seconds = 194 seconds
-    const popUpTime = 198.5;
+    const popUpTime = 197;
     const hideTime = 200; // The second the pop-up will disappear
 
     if (overlayVideo.currentTime >= popUpTime && overlayVideo.currentTime < hideTime && !isChampTargetTriggered) {
